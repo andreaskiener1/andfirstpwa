@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<title>Entschl&uuml;sseln</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-mobile-web-app-title" href="PWA" />			
+<link rel="manifest" href="/manifest.json" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script>
+
+  
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+        .then((reg) => {
+          console.log('Service worker registered.', reg);
+        });
+  });
+}
+  
+function los() {
+var eingabe = document.form1.eingabe.value;
+var key = parseInt(document.form1.key.value);
+var a = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var geheim = "";
+
+for (var i = 0; i <= eingabe.length-1; i++) {
+letter = eingabe[i];
+index = a.indexOf(letter);
+geheim = geheim + a[(index + key)%26];
+}
+document.form1.ausgabe.value = geheim;
+}
+
+</script>
+</head>
+
+<body>
+  <div class="container">
+<form  name="form1" method="post" action="">
+<p>Klartext in Grossbuchstaben</p>
+<p>
+<input class="form-control" type="text"  name="eingabe"></textarea>
+</p>
+<p>Schlüssel, geben sie eine Zahl zwischen 0 und 25 ein:</p>
+<p>
+<input class="form-control" type="text" name="key" /><input class="btn btn-primary mt-3" type="button" onclick="los()" value="verschlüsseln">
+</p>
+<p>Verschl&uuml;sselt:</p>
+<p>
+<input class="form-control" type="text" name="ausgabe"></textarea>
+</p>
+</form>
+  </div>
+</body>
+
+</html>
