@@ -1,8 +1,7 @@
 {
-  "name": "your-first-pwapp",
+  "name": "CaesarCrypt",
   "version": "2.0.0",
-  "description": "Codelab for Your First PWAPP",
-  "homepage": "https://codelabs.developers.google.com/codelabs/your-first-pwapp/",
+  "description": "Caesar Encryption",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -17,10 +16,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/googlecodelabs/your-first-pwapp.git"
+    "url": "https://github.com/andreaskiener1/andfirstpwa.git"
   },
   "bugs": {
-    "url": "https://github.com/googlecodelabs/your-first-pwapp/issues"
+    "url": "https://github.com/andreaskiener1/andfirstpwa/issues"
   },
   "license": "Apache2",
   "keywords": [
