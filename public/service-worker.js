@@ -24,9 +24,11 @@ const CACHE_NAME = 'static-cache-v1';
 const FILES_TO_CACHE = [
   '/',
   '/index.html',
-  '/styles/bootstrap.min.css',
-  '/scripts/bootstrap.min.js',
-  '/scripts/jquery.min.js'
+  '/bootstrap.min.css',
+  '/bootstrap.min.js',
+  '/jquery.min.js'.
+  '/favicon.ico',
+  '/manifest.json'
 ];
 
 /*
