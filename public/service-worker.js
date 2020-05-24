@@ -70,7 +70,7 @@ self.addEventListener('activate', (evt) => {
   self.clients.claim();
 });
 
-/*
+
 self.addEventListener('fetch', (evt) => {
   console.log('[ServiceWorker] Fetch', evt.request.url);
   // CODELAB: Add fetch event handler here.
@@ -90,7 +90,7 @@ evt.respondWith(
         })
   );
 });
-*/
+/*
 self.addEventListener('fetch', (event) => {
   console.log('[ServiceWorker] Fetch', event.request.url);
   if (event.request.method === 'GET') {
@@ -100,7 +100,7 @@ self.addEventListener('fetch', (event) => {
           return response;
         }
         return fetch(event.request).then((response) => {
-          return caches.open(CACHE_NAME.prefetch).then((cache) => {
+          return caches.open(CACHE_NAME).then((cache) => {
             cache.put(event.request.url, response.clone());
             return response;
           });
@@ -110,3 +110,4 @@ self.addEventListener('fetch', (event) => {
   }
 });
 
+*/
