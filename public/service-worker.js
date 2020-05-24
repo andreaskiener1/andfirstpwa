@@ -89,7 +89,7 @@ evt.respondWith(
         })
   );
 });
-*/
+
 self.addEventListener('fetch', (event) => {
   console.log('[ServiceWorker] Fetch', event.request.url);
   if (event.request.method === 'GET') {
@@ -108,3 +108,4 @@ self.addEventListener('fetch', (event) => {
     );
   }
 });
+*/
