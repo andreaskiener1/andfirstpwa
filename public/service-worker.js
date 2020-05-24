@@ -89,7 +89,7 @@ evt.respondWith(
 });
 */
 self.addEventListener('fetch', (event) => {
-  console.log('[ServiceWorker] Fetch', eventt.request.url);
+  console.log('[ServiceWorker] Fetch', event.request.url);
   if (event.request.method === 'GET') {
     event.respondWith(
       caches.match(event.request).then((response) => {
