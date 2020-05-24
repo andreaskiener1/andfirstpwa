@@ -100,7 +100,7 @@ self.addEventListener('fetch', (event) => {
           return response;
         }
         return fetch(event.request).then((response) => {
-          return caches.open(CACHE_NAME).then((cache) => {
+          return caches.open(CACHE_NAME.prefetch).then((cache) => {
             cache.put(event.request.url, response.clone());
             return response;
           });
