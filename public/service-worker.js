@@ -27,7 +27,7 @@ const FILES_TO_CACHE = [
   'service-worker.js'
 ];
 
-/*
+
 self.addEventListener('install', (evt) => {
   console.log('[ServiceWorker] Install');
   // CODELAB: Precache static resources here.
@@ -39,7 +39,7 @@ self.addEventListener('install', (evt) => {
   );
   self.skipWaiting();
 });
-*/
+/*
 self.addEventListener('install', function(event) {
   // Perform install steps
   event.waitUntil(
@@ -50,7 +50,7 @@ self.addEventListener('install', function(event) {
       })
   );
 });
-
+*/
 self.addEventListener('activate', (evt) => {
   console.log('[ServiceWorker] Activate');
   // CODELAB: Remove previous cached data from disk.
