@@ -26,7 +26,7 @@ const FILES_TO_CACHE = [
   '/index.html',
   '/bootstrap.min.css',
   '/bootstrap.min.js',
-  '/jquery.min.js'.
+  '/jquery.min.js',
   '/favicon.ico',
   '/manifest.json'
 ];
