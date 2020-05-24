@@ -88,22 +88,20 @@ evt.respondWith(
   );
 });
 */
-self.addEventListener('fetch', function(event) {
-  console.log('Fetch event for ', event.request.url);
-  event.respondWith(
-    caches.match(event.request).then(function(response) {
-      if (response) {
-        console.log('Found ', event.request.url, ' in cache');
-        return response;
-      }
-      console.log('Network request for ', event.request.url);
-      return fetch(event.request)
-
-    }).catch(function(error) {
-
-      return caches.match('index.html');
-
-    })
-  );
+self.addEventListener("fetch", event => {
+    if (event.request.url === "https://andfirstapp.herokuapp.com/") {
+        // or whatever your app's URL is
+        event.respondWith(
+            fetch(event.request).catch(err =>
+                self.cache.open(cache_name).then(cache => cache.match("/index.html"))
+            )
+        );
+    } else {
+        event.respondWith(
+            fetch(event.request).catch(err =>
+                caches.match(event.request).then(response => response)
+            )
+        );
+    }
 });
 
