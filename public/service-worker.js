@@ -24,7 +24,9 @@ const CACHE_NAME = 'static-cache-v1';
 const FILES_TO_CACHE = [
   '/',
   'index.html',
-  'service-worker.js'
+  'service-worker.js',
+  'favicon.ico',
+  'manifest.json'
 ];
 
 
