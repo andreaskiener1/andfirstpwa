@@ -81,6 +81,7 @@ evt.respondWith(
         .catch(() => {
           return caches.open(CACHE_NAME)
               .then((cache) => {
+                console.log(cache);
                 return cache.match('index.html');
               });
         })
