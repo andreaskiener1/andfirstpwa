@@ -23,12 +23,12 @@ const CACHE_NAME = 'static-cache-v1';
 // CODELAB: Add list of files to cache here.
 const FILES_TO_CACHE = [
   '/',
-  'index.html',
-  'service-worker.js',
-  'favicon.ico',
-  'manifest.json',
-  'caesar192.png',
-  'caesar512.png'
+  '/index.html',
+  '/service-worker.js',
+  '/favicon.ico',
+  '/manifest.json',
+  '/caesar192.png',
+  '/caesar512.png'
 ];
 
 
