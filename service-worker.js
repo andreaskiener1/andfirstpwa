@@ -26,7 +26,9 @@ const FILES_TO_CACHE = [
   'index.html',
   'service-worker.js',
   'favicon.ico',
-  'manifest.json'
+  'manifest.json',
+  'caesar192.png',
+  'caesar512.png'
 ];
 
 
