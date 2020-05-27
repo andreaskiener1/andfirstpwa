@@ -71,7 +71,6 @@ self.addEventListener('activate', (evt) => {
   self.clients.claim();
 });
 
-/*
 self.addEventListener('fetch', (evt) => {
   console.log('[ServiceWorker] Fetch', evt.request.url);
   // CODELAB: Add fetch event handler here.
@@ -91,7 +90,7 @@ evt.respondWith(
         })
   );
 });
-*/
+
 /*
 self.addEventListener('fetch', (event) => {
   console.log('[ServiceWorker] Fetch', event.request.url);
