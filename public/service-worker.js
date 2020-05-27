@@ -85,7 +85,7 @@ evt.respondWith(
               .then((cache) => {
                 console.log("cache:");
                 console.log(cache);
-                return cache.match('/public/index.html');
+                return cache.match('index.html');
               });
         })
   );
