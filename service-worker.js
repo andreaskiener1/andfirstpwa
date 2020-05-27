@@ -18,9 +18,10 @@
 //'use strict';
 
 // CODELAB: Update cache names any time any of the cached files change.
-const CACHE_NAME = 'static-cache-v1'
+const CACHE_NAME = 'mein-static-cache-v1';
 
 // CODELAB: Add list of files to cache here.
+/*
 const FILES_TO_CACHE = [
   '/',
   '/index.html',
@@ -30,13 +31,19 @@ const FILES_TO_CACHE = [
   '/caesar192.png',
   '/caesar512.png'
 ]
-
+*/
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.addAll(
-        FILES_TO_CACHE
-      );
+    caches.open(CACHE_NAME).then(function(cache) {
+      return cache.addAll([
+          '/',
+    '/index.html',
+  '/service-worker.js',
+  '/favicon.ico',
+  '/manifest.json',
+  '/caesar192.png',
+  '/caesar512.png'
+      ]);
     })
   );
 });
