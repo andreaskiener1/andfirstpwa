@@ -56,7 +56,7 @@ self.addEventListener('install', function(event) {
       })
   );
 });
-
+*/
 self.addEventListener('activate', (evt) => {
   console.log('[ServiceWorker] Activate');
   // CODELAB: Remove previous cached data from disk.
@@ -94,7 +94,7 @@ evt.respondWith(
   );
 });
 */
-/*
+
 self.addEventListener('fetch', (event) => {
   console.log('[ServiceWorker] Fetch', event.request.url);
   if (event.request.method === 'GET') {
@@ -114,4 +114,4 @@ self.addEventListener('fetch', (event) => {
   }
 });
 
-*/
+
